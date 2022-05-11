@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
 body {
  padding: 0;
  margin: 0;
@@ -72,6 +74,20 @@ input[type="radio"] {
   background-color: #ab75dd;
 }
 
+.slider-description-wrapper {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide-description {
+  flex: 1 0 100%;
+  text-align: center;
+  color: #fff;
+  font-family: 'Inconsolata', monospace;
+  transition: margin 0.3s ease-in;
+}
+
 #slide1:checked ~ .slider-wrapper label[for="slide1"] > span,
 #slide2:checked ~ .slider-wrapper label[for="slide2"] > span,
 #slide3:checked ~ .slider-wrapper label[for="slide3"] > span,
@@ -86,7 +102,15 @@ input[type="radio"] {
   margin-left: 0;
 }
 
+#slide1:checked ~ .slider-wrapper > .slider-description-wrapper > .mem1 {
+  margin-left: 0;
+}
+
 #slide2:checked  ~ .slider-wrapper > .slider-container > .mem1 {
+  margin-left: -100%;
+}
+
+#slide2:checked ~ .slider-wrapper > .slider-description-wrapper > .mem1 {
   margin-left: -100%;
 }
 
@@ -94,7 +118,15 @@ input[type="radio"] {
   margin-left: -200%;
 }
 
+#slide3:checked ~ .slider-wrapper > .slider-description-wrapper > .mem1 {
+  margin-left: -200%;
+}
+
 #slide4:checked ~ .slider-wrapper > .slider-container > .mem1 {
+  margin-left: -300%;
+}
+
+#slide4:checked ~ .slider-wrapper > .slider-description-wrapper > .mem1 {
   margin-left: -300%;
 }
 
@@ -102,6 +134,14 @@ input[type="radio"] {
   margin-left: -400%;
 }
 
+#slide5:checked ~ .slider-wrapper > .slider-description-wrapper > .mem1 {
+  margin-left: -400%;
+}
+
 #slide6:checked ~ .slider-wrapper > .slider-container > .mem1 {
+  margin-left: -500%;
+}
+
+#slide6:checked ~ .slider-wrapper > .slider-description-wrapper > .mem1 {
   margin-left: -500%;
 }
