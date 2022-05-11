@@ -1,0 +1,107 @@
+body {
+ padding: 0;
+ margin: 0;
+ background-color: #1b1b1b;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.slider-wrapper {
+  padding: 20px 0 0;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.slider-container {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1rem; 
+}
+
+.slide-wrapper {
+  flex: 1 0 100%;
+  height: 66vw;
+  max-height: 33rem;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: margin 0.3s ease-in;
+}
+
+.slide {
+  height: 100%;
+  border-radius: 3%;
+}
+
+.slider-nav {
+  width: min-content;
+  margin: 0 auto;
+  display: flex;
+}
+
+.nav-item {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.nav-item > span {
+  display: block;
+  border-radius: 50%;
+  width: 30%;
+  height: 30%;
+  transition: all 0.3s ease-in;
+  border: 2px solid #8a2be2;
+  background-color: #8a2be2;
+}
+
+.nav-item:hover > span {
+  border-color: #ab75dd;
+  background-color: #ab75dd;
+}
+
+#slide1:checked ~ .slider-wrapper label[for="slide1"] > span,
+#slide2:checked ~ .slider-wrapper label[for="slide2"] > span,
+#slide3:checked ~ .slider-wrapper label[for="slide3"] > span,
+#slide4:checked ~ .slider-wrapper label[for="slide4"] > span,
+#slide5:checked ~ .slider-wrapper label[for="slide5"] > span,
+#slide6:checked ~ .slider-wrapper label[for="slide6"] > span {
+  background-color: transparent;
+}
+
+
+#slide1:checked ~ .slider-wrapper > .slider-container > .mem1 {
+  margin-left: 0;
+}
+
+#slide2:checked  ~ .slider-wrapper > .slider-container > .mem1 {
+  margin-left: -100%;
+}
+
+#slide3:checked ~ .slider-wrapper > .slider-container > .mem1 {
+  margin-left: -200%;
+}
+
+#slide4:checked ~ .slider-wrapper > .slider-container > .mem1 {
+  margin-left: -300%;
+}
+
+#slide5:checked ~ .slider-wrapper > .slider-container > .mem1 {
+  margin-left: -400%;
+}
+
+#slide6:checked ~ .slider-wrapper > .slider-container > .mem1 {
+  margin-left: -500%;
+}
