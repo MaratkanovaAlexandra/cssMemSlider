@@ -14,13 +14,18 @@ input[type="radio"] {
   padding: 20px 0 0;
   margin: 0 auto;
   width: 90%;
+  max-width: 50rem;
 }
 
 .slider-container {
+  border: 3px solid #fff;
   display: flex;
   width: 100%;
   overflow: hidden;
   margin-bottom: 1rem; 
+  padding: 0.5rem 0;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
 }
 
 .slide-wrapper {
@@ -40,6 +45,12 @@ input[type="radio"] {
   border-radius: 3%;
 }
 
+.flex {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+}
+
 .slider-nav {
   width: min-content;
   margin: 0 auto;
@@ -47,7 +58,6 @@ input[type="radio"] {
 }
 
 .nav-item {
-  display: block;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
@@ -77,10 +87,13 @@ input[type="radio"] {
 .slider-description-wrapper {
   display: flex;
   width: 100%;
+  max-width: 20rem;
   overflow: hidden;
 }
 
 .slide-description {
+  height: min-content;
+  margin: 1rem 0;
   flex: 1 0 100%;
   text-align: center;
   color: #fff;
@@ -102,7 +115,7 @@ input[type="radio"] {
   margin-left: 0;
 }
 
-#slide1:checked ~ .slider-wrapper > .slider-description-wrapper > .mem1 {
+#slide1:checked ~ .slider-wrapper > .flex > .slider-description-wrapper > .mem1 {
   margin-left: 0;
 }
 
@@ -110,7 +123,7 @@ input[type="radio"] {
   margin-left: -100%;
 }
 
-#slide2:checked ~ .slider-wrapper > .slider-description-wrapper > .mem1 {
+#slide2:checked ~ .slider-wrapper > .flex > .slider-description-wrapper > .mem1 {
   margin-left: -100%;
 }
 
@@ -118,7 +131,7 @@ input[type="radio"] {
   margin-left: -200%;
 }
 
-#slide3:checked ~ .slider-wrapper > .slider-description-wrapper > .mem1 {
+#slide3:checked ~ .slider-wrapper > .flex > .slider-description-wrapper > .mem1 {
   margin-left: -200%;
 }
 
@@ -126,7 +139,7 @@ input[type="radio"] {
   margin-left: -300%;
 }
 
-#slide4:checked ~ .slider-wrapper > .slider-description-wrapper > .mem1 {
+#slide4:checked ~ .slider-wrapper > .flex > .slider-description-wrapper > .mem1 {
   margin-left: -300%;
 }
 
@@ -134,7 +147,7 @@ input[type="radio"] {
   margin-left: -400%;
 }
 
-#slide5:checked ~ .slider-wrapper > .slider-description-wrapper > .mem1 {
+#slide5:checked ~ .slider-wrapper > .flex > .slider-description-wrapper > .mem1 {
   margin-left: -400%;
 }
 
@@ -142,6 +155,28 @@ input[type="radio"] {
   margin-left: -500%;
 }
 
-#slide6:checked ~ .slider-wrapper > .slider-description-wrapper > .mem1 {
+#slide6:checked ~ .slider-wrapper > .flex > .slider-description-wrapper > .mem1 {
   margin-left: -500%;
+}
+
+@media screen and (min-width: 500px) {
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .slider-nav {
+    margin: 0;
+    order: 1;
+  }
+
+  .slider-description-wrapper {
+    order: 0;
+  }
+
+  .slide-description {
+    margin: 0;
+    text-align: left;
+  }
 }
