@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+body {
+ padding: 0;
+ margin: 0;
+ background-color: #1b1b1b;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.slider-wrapper {
+  padding: 20px 0 0;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 50rem;
+}
+
+.slider-container {
+  border: 3px solid #fff;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1rem; 
+  padding: 0.5rem 0;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+}
+
+.slide-wrapper {
+  flex: 1 0 100%;
+  height: 66vw;
+  max-height: 33rem;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: margin 0.3s ease-in;
+}
+
+.slide {
+  height: 100%;
+  border-radius: 3%;
+}
+
+.flex {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+}
+
+.slider-nav {
+  width: min-content;
+  margin: 0 auto;
+  display: flex;
+}
+
+.nav-item {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.nav-item > span {
+  display: block;
+  border-radius: 50%;
+  width: 30%;
+  height: 30%;
+  transition: all 0.3s ease-in;
+  border: 2px solid #8a2be2;
+  background-color: #8a2be2;
+}
+
+.nav-item:hover > span {
+  border-color: #ab75dd;
+  background-color: #ab75dd;
+}
+
+.nav-item:active > span {
+  border-color: #e7d3f9;
+  background-color: #e7d3f9;
+}
+
+.slider-description-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 20rem;
+  overflow: hidden;
+}
+
+.slide-description {
+  height: min-content;
+  margin: 1rem 0;
+  flex: 1 0 100%;
+  text-align: center;
+  color: #fff;
+  font-family: 'Inconsolata', monospace;
+  transition: margin 0.3s ease-in;
+}
+
+#slide1:checked ~ .slider-wrapper label[for="slide1"] > span,
+#slide2:checked ~ .slider-wrapper label[for="slide2"] > span,
+#slide3:checked ~ .slider-wrapper label[for="slide3"] > span,
+#slide4:checked ~ .slider-wrapper label[for="slide4"] > span,
+#slide5:checked ~ .slider-wrapper label[for="slide5"] > span,
+#slide6:checked ~ .slider-wrapper label[for="slide6"] > span {
+  background-color: transparent;
+}
+
+#slide1:checked ~ .slider-wrapper label[for="slide1"]:hover > span,
+#slide2:checked ~ .slider-wrapper label[for="slide2"]:hover > span,
+#slide3:checked ~ .slider-wrapper label[for="slide3"]:hover > span,
+#slide4:checked ~ .slider-wrapper label[for="slide4"]:hover > span,
+#slide5:checked ~ .slider-wrapper label[for="slide5"]:hover > span,
+#slide6:checked ~ .slider-wrapper label[for="slide6"]:hover > span {
+  border-color: #8a2be2;
+}
+
+#slide1:checked ~ .slider-wrapper > .slider-container > .mem1 {
+  margin-left: 0;
+}
+
+#slide1:checked ~ .slider-wrapper > .flex > .slider-description-wrapper > .mem1 {
+  margin-left: 0;
+}
+
+#slide2:checked  ~ .slider-wrapper > .slider-container > .mem1 {
+  margin-left: -100%;
+}
+
+#slide2:checked ~ .slider-wrapper > .flex > .slider-description-wrapper > .mem1 {
+  margin-left: -100%;
+}
+
+#slide3:checked ~ .slider-wrapper > .slider-container > .mem1 {
+  margin-left: -200%;
+}
+
+#slide3:checked ~ .slider-wrapper > .flex > .slider-description-wrapper > .mem1 {
+  margin-left: -200%;
+}
+
+#slide4:checked ~ .slider-wrapper > .slider-container > .mem1 {
+  margin-left: -300%;
+}
+
+#slide4:checked ~ .slider-wrapper > .flex > .slider-description-wrapper > .mem1 {
+  margin-left: -300%;
+}
+
+#slide5:checked ~ .slider-wrapper > .slider-container > .mem1 {
+  margin-left: -400%;
+}
+
+#slide5:checked ~ .slider-wrapper > .flex > .slider-description-wrapper > .mem1 {
+  margin-left: -400%;
+}
+
+#slide6:checked ~ .slider-wrapper > .slider-container > .mem1 {
+  margin-left: -500%;
+}
+
+#slide6:checked ~ .slider-wrapper > .flex > .slider-description-wrapper > .mem1 {
+  margin-left: -500%;
+}
+
+@media screen and (min-width: 500px) {
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .slider-nav {
+    margin: 0;
+    order: 1;
+  }
+
+  .slider-description-wrapper {
+    order: 0;
+  }
+
+  .slide-description {
+    margin: 0;
+    text-align: left;
+  }
+}
