@@ -84,6 +84,11 @@ input[type="radio"] {
   background-color: #ab75dd;
 }
 
+.nav-item:active > span {
+  border-color: #e7d3f9;
+  background-color: #e7d3f9;
+}
+
 .slider-description-wrapper {
   display: flex;
   width: 100%;
