@@ -110,6 +110,14 @@ input[type="radio"] {
   background-color: transparent;
 }
 
+#slide1:checked ~ .slider-wrapper label[for="slide1"]:hover > span,
+#slide2:checked ~ .slider-wrapper label[for="slide2"]:hover > span,
+#slide3:checked ~ .slider-wrapper label[for="slide3"]:hover > span,
+#slide4:checked ~ .slider-wrapper label[for="slide4"]:hover > span,
+#slide5:checked ~ .slider-wrapper label[for="slide5"]:hover > span,
+#slide6:checked ~ .slider-wrapper label[for="slide6"]:hover > span {
+  border-color: #8a2be2;
+}
 
 #slide1:checked ~ .slider-wrapper > .slider-container > .mem1 {
   margin-left: 0;
